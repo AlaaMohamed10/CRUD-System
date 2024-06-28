@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<div class="w-75 mx-auto bg-info rounded p-3 mt-3">
+    <h1 class="text-center">CRUDs System</h1>
+
+    <div>
+        <label for="ProductNameInput">Product Name :</label>
+        <input oninput="validationName()" class="form-control" type="text" id="ProductNameInput">
+        <div id="nameMasseg" class="alert alert-danger d-none">You Should...</div>
+
+        <label for="ProductPriceInput">Product Price :</label>
+        <input oninput="validationPrice()" class="form-control" type="number" id="ProductPriceInput">
+        <div id="priceMasseg" class="alert alert-danger d-none">You Should...</div>
+
+        <label for="ProductCategoryInput">Product Category :</label>
+        <input oninput="validationCategory()" class="form-control" type="text" id="ProductCategoryInput">
+        <div id="categoryMasseg" class="alert alert-danger d-none">You Should...</div>
+
+
+        <label for="ProductDescriptionInput">Product Description :</label>
+        <textarea class="form-control" id="ProductDescriptionInput"></textarea>
+
+
+        <button id="addBtn" onclick=" getProduct()" class="btn btn-primary mt-3 w-100">Add Product</button>
+
+        <button id="updateBdn" onclick="Update()" class="btn btn-primary mt-3 w-100 d-none">Update Product</button>
+
+        <input oninput="search()" id="SearchInput" type="search" class="form-control my-3 w-75 mx-auto" placeholder="Search...">
+
+
+        <table class="table text-center my-3">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                <tbody id="tbody">
+                   
+                </tbody>
+            </thead>
+        </table>
+
+
+
+    </div>
+
+
+</div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
